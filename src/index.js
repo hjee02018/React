@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Routes, Route, Link, BrowserRouter, createBrowserRouter, RouterProvider,} from 'react-router-dom';
-import EndPage from './endPage/endpage';
+import EndPage from './endPage/EndPage';
+import Room2 from './room2/Room2'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
     path: "end",
     element: <EndPage/>
   },  
+  {
+    path: 'room2',
+    element: <Room2/>
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
