@@ -20,7 +20,7 @@ function MainComponent() {
 
   const imgStyle3 = {
     width: "100%",
-    height: "100vh",
+    height: "100%",
     top: 0,
     left: 0,
     position: "fixed",
@@ -50,6 +50,7 @@ function MainComponent() {
             alt="Start CTA"
             className="cta-txt-image2"
             onClick={handleStartClick}
+            style={{ cursor: "pointer" }}
           />
           <img src="./res/logo_w.svg" alt="logo CTA" className="logo-image" />
         </>
