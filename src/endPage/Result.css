@@ -1,0 +1,35 @@
+.results{
+    width:200px;
+    display:inline-block;
+    margin: 0 30px;
+}
+.results>img{
+    display:block;
+    margin: 0 auto;
+}
+.compatibility{
+    width:300px;
+    display:inline-block;
+}
+.compatibility>img{
+    display:block;
+    margin: 0 auto;
+}
+.compatibility>.resultExplain{
+    width:200px;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+.resultTitle{
+    font-size: 18px;
+    font-weight:900;
+    text-align: center;
+    color:white;
+    margin-bottom: 2vh;
+}
+.resultExplain{
+    font-size: 12px;
+    text-align: center;
+    color:white;
+    margin-top: 5vh;
+}

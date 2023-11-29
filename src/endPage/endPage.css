@@ -1,0 +1,86 @@
+*{
+    margin:0px;
+    border:0px;
+}
+.endPageBody{
+    width: 100%;
+    line-height:2.5;
+}
+.endPageHeader{
+    width: 100%;
+    height: auto;
+}
+.endPageHeader>img{
+    width: 100%;
+    height: auto;
+}
+.endPageMain{
+    background-image: url(../../public/res/endPageRes/final\ bg\ 1.png);
+    /*배경이미지 위로 올리기*/
+    background-position: 0px -6vw;
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    padding-top:150px;
+}
+.animalLine{
+    width:90%;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    display:flex;
+    justify-content: center;
+}
+.animal{
+    position:relative;
+    width: 30vw;
+    height: 30vw;
+}
+.animalDescription{
+    width: 50%;
+    position:relative;
+}
+.animalP{
+    color:white;
+    width:50%;
+}
+.aniIntro{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 30px 0px;
+}
+.aniName{
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+.aniExp{
+    font-size: 13px;
+    margin-bottom: 50px;
+}
+.moreInfo{
+    width:100%;
+}
+.endButton{
+    width:30%;
+    margin-right: 10%;
+}
+.moreInfo svg:hover{
+    cursor:pointer;
+}
+.moreInfo svg:hover .whiteLine{
+    fill: yellow;
+}
+.resultLine, .compatibilityLine{
+    width:90%;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.endPageFooter{
+    width: 100%;
+    height: auto;
+}
+.endPageFooter>img{
+    width: 100%;
+}
