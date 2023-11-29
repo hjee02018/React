@@ -1,0 +1,47 @@
+.question {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.questionSheet {
+  width: 32vw;
+  height: 48vh;
+  background-image: url(../../public/res/room2Res/popupbg.png);
+  background-size: 100% 100%;
+  position: absolute;
+  animation-name: slidein;
+  animation-duration: 0.5s;
+}
+/*<Question>이 밑에서부터 위로 slidein하는 효과*/
+@keyframes slidein {
+  from {
+    transform: translateY(50vh);
+  }
+  to {
+    transform: translateY(0vh);
+  }
+}
+.questionSection {
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+  width: fit-content;
+  margin: 6vh 2vw;
+}
+.answerSection {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.answers img {
+  width: 12vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-bottom: 2vh;
+  cursor: pointer;
+}
