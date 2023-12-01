@@ -9,13 +9,13 @@ export default function Question({erase, show, setShow, q, a1, a2, a3, a4}) {
     //e.target.className을 확인해서 뭐를 눌렀는지 확인 -> 눌렀는 것에 따라 json을 업데이트
     function clickAnswer(e){
         if (e.target.className=="a1"){
-            answerResult[0].a ++;
+            answerResult[0].a++;
         } else if (e.target.className=="a2"){
-            answerResult[0].b ++;
+            answerResult[0].b++;
         }else if (e.target.className=="a3"){
-            answerResult[0].c ++;
+            answerResult[0].c++;
         }else if (e.target.className=="a4"){
-            answerResult[0].d ++;
+            answerResult[0].d++;
         }
         console.log(answerResult[0].a, answerResult[0].b, answerResult[0].c, answerResult[0].d);
 

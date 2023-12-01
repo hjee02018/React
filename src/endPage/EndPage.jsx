@@ -2,26 +2,110 @@ import React from 'react';
 import './endPage.css';
 import Result from './Result';
 import {useNavigate} from "react-router-dom";
+import answerResult from '../answerResult';
+
+function findMaxElementList(arr) {
+
+    let maxElement = arr[0];
+    let maxElementIndex = 0;
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > maxElement) {
+            maxElement = arr[i];
+            maxElementIndex = i;
+        }
+    }
+
+    return maxElementIndex;
+}
 
 export default function EndPage() {
     const navigate = useNavigate();
+
+
+    // Result json 결과를 통해 EndPage 결과 값 변경
+    // (수정필요) 들여쓰기 테스트 
+    // (수정필요) 수호신 배경 텍스트
+
+    //answerResult 값 확인
+    const list = [answerResult[0].a, answerResult[0].b, answerResult[0].c, answerResult[0].d];
+
+    // 사용자 최종 수호신 인덱스
+    const index = findMaxElementList(list);
+
+    // 수호신 기본 정보
+    const anisrc = ["./res/endPageRes/dragon.png", "./res/endPageRes/bird.png", "./res/endPageRes/tiger.png", "./res/endPageRes/turtle.png"];
+    const antiIntro = ["주체할 수 없이 뿜어져 나오는 생명력", "세상의 빛과 소금과 같은 존재","귀신 잡는 튼튼한 체력", "바라보는 대로 다 이루어내는"];
+    const aniName = ["셋미르", "마아시", "하늬범", "높거북"];
+    const aniExp = [
+        "추위를 이겨내고 막 찾아온 봄에\n 꽁꽁 얼어붙은 땅을 밟고 움트는 새싹처럼 강인한 생명력의 당신.\n 동쪽의 사방신 청룡이 당신의 수호신이 되어줄 것이다.",
+        "냉철한 판단력과 뜨거운 열정이 공존하여\n 주변 사람들을 행복하게 만들어주는 당신.\n 남쪽의 사방신 주작이 당신의 수호신이 되어줄 것이다.",
+        "귀신마저 겁에 질려 도망갈 정도로 강인한 체력은\n 당신이 해온 수련의 결과물이자 성공의 토대가 된다.\n 서쪽의 사방신 백호가 당신의 수호신이 되어줄 것이다.",
+        "가까운 사람들과 함께하는 것을 원동력으로 삼는\n 당신의 꾸준한 노력은 역시, 진인사대천명.\n 북쪽의 사방신 현무가 당신의 수호신이 되어줄 것이다."
+    ];
+    
+    // 수호신 세부 정보
+    const title = [
+        ["계절: 봄", "적성: 명리학", "방위: 동" ], ["계절: 여름", "적성: 의술", "방위: 남" ], ["계절: 가을", "적성: 도술", "방위: 서"], ["계절: 겨울", "적성: 무속학", "방위: 북"],];
+    const image = [
+        // (수정) 마지막 사진은 왜 넣는것일까? => 이건 배경으로 변경할 예정
+        ["./res/endPageRes/season1.png", "./res/endPageRes/subject1.png", "./res/endPageRes/east.svg","./res/endPageRes/tiger.png.png" ],
+        ["./res/endPageRes/season2.png", "./res/endPageRes/subject2.png", "./res/endPageRes/south.svg","./res/endPageRes/tiger.png.png" ],
+        ["./res/endPageRes/season3.png", "./res/endPageRes/subject3.png", "./res/endPageRes/west.svg","./res/endPageRes/tiger.png.png" ],
+        ["./res/endPageRes/season4.png", "./res/endPageRes/subject4.png", "./res/endPageRes/north.svg","./res/endPageRes/tiger.png.png" ]
+    ];
+
+    const explain = [
+        [ 
+            "겨울이 지나고 \n봄이 오듯\n 고생 끝에 낙이 온다는\n 희망을 잃지 말기를.",
+            "문명의 전반적인 흐름을\n 읽는 학문이다.\n 누구나 공부해서\n 적용할 수 있다!",
+            "동쪽에 떠오르는 햇살을 맞이하며, \n올해는 다 잘 풀리기를 기원하자.",
+            "어둠이 있기 때문에<br /> 빛은 더욱 돋보이는 법이다.<br /> 가깝고도 먼 미래를 알아내보자.",
+            "용호상박이라고 들어 보았는가? <br />서로 마주보며 매일 으르렁대는 사이. <br />도무지 조아질 기미가 안보여!"
+        ],
+        [
+            "활기찬 여름날의 에너지는\n 괜시리 기분을 들뜨게 만드는\n 뭔가가 있다.",
+            "옆에만 있어도 기분 좋게,\n 편안하게 만들어주는\n 좋은 기운을 타고났다.",
+            "따뜻한 남쪽으로 가보자.\n 새로운 날씨와\n 새로운 사람들을 경험하며.",
+            "공부도 체력이 있어야 잘하고,\n 체력에는 정신력이 포함된다.\n 무엇 하나 놓칠 수 없지!",
+            "둘 다 에너지가 너무 높아서\n 함께 있으면 어디로 튈 지를\n 몰라서 곤란하다."
+        ],
+        [
+            "야외 활동 하기에 딱 좋아서\n 행복한 나날들,\n 짧은 만큼 소중하다.",
+            "마음을 비우고 득도하면\n 삿된 것들을 물리치고\n 자신의 중심을 다잡게 된다.",
+            "태양은 서쪽에서 뜨지 않는다.\n 그곳엔 백호가 자리하기 때문.",
+            "공부도 체력이 있어야 잘하고,\n 체력에는 정신력이 포함된다.\n 무엇 하나 놓칠 수 없지!",
+            "용호상박이라고 들어 보았는가? <br />서로 마주보며 매일 으르렁대는 사이. <br />도무지 조아질 기미가 안보여!"
+        ],
+        [
+            "차가운 겨울날 소중한 이들과\n 한 데 모여 온기를 나누고\n 이야기꽃을 피우는 것이\n 행복이니까",
+            "엄청난 행운!\n 간절하게 바라면 이루어진다.\n 그에 걸맞는 노력은 필수!",
+            "찬바람 쌩쌩 불 것 같지만\n 알고보면 포근하다고 한다.",
+            "어둠이 있기 때문에<br /> 빛은 더욱 돋보이는 법이다.<br /> 가깝고도 먼 미래를 알아내보자.",
+            "한 쪽은 신을 모시고,\n 한 쪽은 귀신을 잡는다니!\n 함께 가기는 힘들겠다."
+        ]
+    ];
+
+    //궁합 정보
+    const relations =[[anisrc[3], anisrc[2]], [anisrc[2], anisrc[0]], [anisrc[1], anisrc[0]], [anisrc[0], anisrc[2]]];
+
+    const backgroundStyle = { backgroundImage: 'url(./res/endPageRes/final_bg_1.png)'}
+
+
     return (
         <div>
             <div className="endPageBody">
                 <div className="endPageHeader">
                     <img src='./res/endPageRes/final_header.png'/>
                 </div>
-                <div className="endPageMain">
+                <div className="endPageMain" >
                     <div className="animalLine">
-                        <img src='./res/endPageRes/dragon.png' width="40%" className="animal"/>
+                        <img src= {anisrc[index]} width="40%" className="animal"/>
                         <div className="animalDescription">
                             <div className="animalP">
-                                <p className="aniIntro">주체할 수 없이 뿜어져 나오는 생명력</p>
-                                <p className="aniName">셋미르</p>
-                                <p className="aniExp">추위를 이겨내고 막 찾아온 봄에 꽁꽁 얼어붙은<br />
-                                    땅을 밟고 움트는 새싹처럼 강인한 생명력의 당신.<br />
-                                    동쪽의 사방신 청룡이 당신의 수호신이 되어줄 것이다.
-                                </p>
+                                <p className="aniIntro">{antiIntro[index]}</p>
+                                <p className="aniName">{aniName[index]}</p>
+                                <p className="aniExp">{aniExp[index]}</p>
                             </div>
                             <div className="moreInfo">
                                 <svg className="endButton" width="258" height="88" viewBox="0 0 258 88" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,55 +158,52 @@ export default function EndPage() {
                                         </clipPath>
                                         </defs>
                                     </svg>
-                                
-                                
                             </div>
                         </div>
                     </div>
                     <div className="resultLine">
                         <Result 
-                            title="계절: 봄" 
-                            imgsrc="./res/endPageRes/season1.png" 
+                            title={title[index][0]}
+                            imgsrc={image[index][0]} 
                             width="150px" 
                             height="150px" 
-                            explain="겨울이 지나고 <br />봄이 오듯<br /> 고생 끝에 낙이 온다는<br /> 희망을 잃지 말기를."
+                            explain={explain[index][0]}
                             cls="results"
                         />
                         <Result 
-                            title="적성: 명리학" 
-                            imgsrc="./res/endPageRes/subject1.png" 
+                            title={title[index][1]} 
+                            imgsrc={image[index][1]} 
                             width="150px" 
                             height="150px" 
-                            explain="문명의 전반적인 흐름을<br /> 읽는 학문이다.<br /> 누구나 공부해서<br /> 적용할 수 있다!"
+                            explain={explain[index][1]}
                             cls="results"
                         />
                         <Result 
-                            title="방위: 동" 
-                            imgsrc="./res/endPageRes/east.svg" 
+                            title= {title[index][2]}
+                            imgsrc= {image[index][2]} 
                             width="150px" 
                             height="150px" 
-                            explain="동쪽에 떠오르는 햇살을<br /> 맞이하며, 올해는<br /> 다 잘 풀리기를 기원하자."
+                            explain= {explain[index][2]}
                             cls="results"
                         />
                     </div>
                     <div className="compatibilityLine">
                         <Result 
                                 title="환상 궁합" 
-                                imgsrc="./res/endPageRes/turtle.png.png" 
+                                imgsrc={relations[index][0]} 
                                 width="200px" 
                                 height="auto" 
-                                explain="어둠이 있기 때문에<br /> 빛은 더욱 돋보이는 법.<br /> 가깝고도 먼 미래를 알아내보자."
+                                explain={explain[index][3]} 
                                 cls="compatibility"
                         />
                         <Result 
                                 title="환장 궁합" 
-                                imgsrc="./res/endPageRes/tiger.png.png" 
+                                imgsrc={relations[index][1]} 
                                 width="200px" 
                                 height="auto" 
-                                explain="용호상박이라고 들어 보았는가? <br />서로 마주보며 매일 으르렁대는 사이. <br />도무지 조아질 기미가 안보여!"
+                                explain={explain[index][4]}
                                 cls="compatibility"
                         />
-                            
                     </div>
                     <img src=""/>
                 </div>
