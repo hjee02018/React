@@ -15,7 +15,7 @@
     height: auto;
 }
 .endPageMain{
-    background-image: url(../../public/res/endPageRes/final_bg_1.png);
+    /*background-image: url(../../public/res/endPageRes/final_bg_1.png);
     /*배경이미지 위로 올리기*/
     background-position: 0px -6vw;
     background-repeat: repeat-y;

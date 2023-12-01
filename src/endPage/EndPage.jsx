@@ -98,7 +98,7 @@ export default function EndPage() {
                 <div className="endPageHeader">
                     <img src='./res/endPageRes/final_header.png'/>
                 </div>
-                <div className="endPageMain" >
+                <div className="endPageMain" style = {backgroundStyle}>
                     <div className="animalLine">
                         <img src= {anisrc[index]} width="40%" className="animal"/>
                         <div className="animalDescription">
@@ -205,7 +205,6 @@ export default function EndPage() {
                                 cls="compatibility"
                         />
                     </div>
-                    <img src=""/>
                 </div>
                 <div className="endPageFooter">
                     <img src='./res/endPageRes/final_footer.png'/>
