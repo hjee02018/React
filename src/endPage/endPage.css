@@ -4,21 +4,22 @@
 }
 .endPageBody{
     width: 100%;
-    line-height:2.5;
+    line-height:2.0;
 }
+
 .endPageHeader{
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 .endPageHeader>img{
+    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 .endPageMain{
-    /*background-image: url(../../public/res/endPageRes/final_bg_1.png);
-    /*배경이미지 위로 올리기*/
-    background-position: 0px -6vw;
-    background-repeat: repeat-y;
+    /*background-image: url(../../public/res/endPageRes/final_bg_1.png);*/
+    background-position: 0px -10.5vw;
+    /*background-repeat: repeat-y;*/
     background-size: 100% auto;
     padding-top:150px;
 }
@@ -28,8 +29,10 @@
     margin-bottom: 200px;
     display:flex;
     justify-content: center;
+    white-space: pre-lines;
 }
 .animal{
+    margin-top: 30px;
     position:relative;
     width: 30vw;
     height: 30vw;
@@ -40,20 +43,24 @@
 }
 .animalP{
     color:white;
-    width:50%;
+    width:70%;
 }
 .aniIntro{
-    font-size: 20px;
+    
+    font-size: 28px;
     font-weight: 500;
-    margin: 30px 0px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    /*margin: 0px 0px;*/
 }
 .aniName{
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 900;
     margin-bottom: 50px;
 }
 .aniExp{
-    font-size: 13px;
+    white-space: pre-wraps;
+    font-size: 15px;
     margin-bottom: 50px;
 }
 .moreInfo{
@@ -69,7 +76,7 @@
 .moreInfo svg:hover .whiteLine{
     fill: yellow;
 }
-.resultLine, .compatibilityLine{
+.resultLine{
     width:90%;
     margin: 0 auto;
     margin-bottom: 200px;
@@ -77,10 +84,33 @@
     align-items: flex-start;
     justify-content: center;
 }
+
+.compatibilityLine{
+    width:90%;
+    margin: 0 auto;
+    /*margin-bottom: 200px;*/
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.logoLine{
+    height: 358px;
+}
+.logoImage{
+    
+    margin-top: 180px;
+    margin-left : 570px;
+    position:relative;
+    width: 22vw;
+}
+
 .endPageFooter{
     width: 100%;
     height: auto;
 }
 .endPageFooter>img{
     width: 100%;
+    height: auto;
+    display: block;
 }
