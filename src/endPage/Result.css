@@ -16,7 +16,7 @@
     margin: 0 auto;
 }
 .compatibility>.resultExplain{
-    width:200px;
+    width:240px;
     margin: 0 auto;
     margin-top: 5vh;
 }
@@ -28,7 +28,7 @@
     margin-bottom: 2vh;
 }
 .resultExplain{
-    font-size: 13px;
+    font-size: 14px;
     text-align: center;
     color:white;
     margin-top: 5vh;

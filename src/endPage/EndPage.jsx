@@ -20,6 +20,14 @@ function findMaxElementList(arr) {
     return maxElementIndex;
 }
 
+// 결과 초기화 
+function initAnswerResult(){
+    answerResult[0].a = 0;
+    answerResult[0].b = 0;
+    answerResult[0].c = 0;
+    answerResult[0].d = 0;
+}
+
 export default function EndPage() {
     const navigate = useNavigate();
 
@@ -30,7 +38,8 @@ export default function EndPage() {
 
     //answerResult 값으로 사용자 최종 수호신 인덱스 설정
     const list = [answerResult[0].a, answerResult[0].b, answerResult[0].c, answerResult[0].d];
-    const index = 2;//findMaxElementList(list);
+    const index = findMaxElementList(list);
+    console.log(answerResult[0].a, answerResult[0].b, answerResult[0].c, answerResult[0].d);
 
     // 수호신 기본 정보
     const anisrc = ["./res/endPageRes/dragon.png", "./res/endPageRes/bird.png", "./res/endPageRes/tiger.png", "./res/endPageRes/turtle.png"];
@@ -40,7 +49,7 @@ export default function EndPage() {
         "추위를 이겨내고 막 찾아온 봄에\n꽁꽁 얼어붙은 땅을 밟고 움트는 새싹과 같은 당신.\n동쪽의 사방신 청룡이 당신의 수호신이 되어줄 것이다.",
         "냉철한 판단력과 뜨거운 열정이 공존하여\n주변 사람들을 행복하게 만들어주는 당신.\n남쪽의 사방신 주작이 당신의 수호신이 되어줄 것이다.",
         "귀신마저 겁에 질려 도망갈 정도로 강인한 체력은\n당신이 해온 수련의 결과물이자 성공의 토대가 된다.\n서쪽의 사방신 백호가 당신의 수호신이 되어줄 것이다.",
-        "가까운 사람들과 함께하는 것을 원동력으로 삼는\n 당신의 꾸준한 노력은 역시, 진인사대천명.\n북쪽의 사방신 현무가 당신의 수호신이 되어줄 것이다."
+        "가까운 사람들과 함께하는 것을 원동력으로 삼는\n당신의 꾸준한 노력은 역시, 진인사대천명.\n북쪽의 사방신 현무가 당신의 수호신이 되어줄 것이다."
     ];
     
     // 수호신 세부 정보
@@ -59,7 +68,7 @@ export default function EndPage() {
             "문명의 전반적인 흐름을\n 읽어내는 학문이다.\n 누구나 공부해서\n 적용할 수 있다!",
             "동쪽에 떠오르는 햇살을 맞이하며, \n올해는 다 잘 풀리기를 기원하자.",
             "어둠이 있기 때문에\n 빛은 더욱 돋보이는 법이다.<br /> 가깝고도 먼 미래를 알아내보자.",
-            "용호상박이라고 들어 보았는가? <br />서로 마주보며 매일 으르렁대는 사이. <br />도무지 조아질 기미가 안보여!"
+            "용호상박이라고 들어 보았는가?\n서로 마주보며 매일 으르렁대는\n사이. 도무지 좋아질 기미가 안 보여!"
         ],
         [
             "활기찬 여름날의 에너지는\n 괜시리 기분을 들뜨게 만드는\n 뭔가가 있다.",
@@ -69,18 +78,18 @@ export default function EndPage() {
             "둘 다 에너지가 너무 높아서\n 함께 있으면 어디로 튈 지를\n 몰라서 곤란하다."
         ],
         [
-            "야외 활동 하기에 딱 좋아서\n 행복한 나날들,\n 짧은 만큼 소중하다.",
-            "마음을 비우고 득도하면\n 삿된 것들을 물리치고\n 자신의 중심을 다잡게 된다.",
-            "태양은 서쪽에서 뜨지 않는다.\n 그곳엔 백호가 자리하기 때문.",
-            "공부도 체력이 있어야 잘하고,\n 체력에는 정신력이 포함된다.\n 무엇 하나 놓칠 수 없지!",
-            "용호상박이라고 들어 보았는가? <br />서로 마주보며 매일 으르렁대는<br />사이.도무지 조아질 기미가 안보여!"
+            "야외 활동 하기에 딱 좋아서\n행복한 나날들,\n짧은 만큼 소중하다.",
+            "마음을 비우고 득도하면\n삿된 것들을 물리치고\n자신의 중심을 다잡게 된다.",
+            "태양은 서쪽에서 뜨지 않는다.\n그곳엔 백호가 자리하기 때문.",
+            "공부도 체력이 있어야 잘하고,\n체력에는 정신력이 포함된다.\n무엇 하나 놓칠 수 없지!",
+            "용호상박이라고 들어 보았는가?\n서로 마주보며 매일 으르렁대는\n사이. 도무지 좋아질 기미가 안 보여!"
         ],
         [
-            "차가운 겨울날 소중한 이들과\n 한 데 모여 온기를 나누고\n 이야기꽃을 피우는 것이\n 행복이니까",
-            "엄청난 행운!\n 간절하게 바라면 이루어진다.\n 그에 걸맞는 노력은 필수!",
-            "찬바람 쌩쌩 불 것 같지만\n 알고보면 포근하다고 한다.",
-            "어둠이 있기 때문에<br /> 빛은 더욱 돋보이는 법이다.\n 가깝고도 먼 미래를 알아내보자.",
-            "한 쪽은 신을 모시고,\n 한 쪽은 귀신을 잡는다니!\n 함께 가기는 힘들겠다."
+            "차가운 겨울날 소중한 이들과\n한 데 모여 온기를 나누고\n이야기꽃을 피우는 것이\n 행복이니까",
+            "엄청난 행운!\n간절하게 바라면 이루어진다.\n그에 걸맞는 노력은 필수!",
+            "찬바람 쌩쌩 불 것 같지만\n알고보면 포근하다고 한다.",
+            "어둠이 있기 때문에\n빛은 더욱 돋보이는 법이다.\n가깝고도 먼 미래를 알아내보자.",
+            "한 쪽은 신을 모시고,\n한 쪽은 귀신을 잡는다니!\n함께 가기는 힘들겠다."
         ]
     ];
 
@@ -136,7 +145,7 @@ export default function EndPage() {
                                     </clipPath>
                                     </defs>
                                 </svg>                                
-                                    <svg onClick={()=>navigate('/')}className="endButton" width="258" height="88" viewBox="0 0 258 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg onClick={() => { initAnswerResult(); navigate('/');} } className="endButton" width="258" height="88" viewBox="0 0 258 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_394_336)">
                                         <path d="M255.83 1.17969H1.17969V86.3897H255.83V1.17969Z" fill="#4AE6CA"/>
                                         <path d="M254.8 1.18C255.37 1.18 255.84 1.64 255.84 2.22V85.35C255.84 85.92 255.38 86.39 254.8 86.39H2.22C1.65 86.39 1.18 85.93 1.18 85.35V2.22C1.18 1.65 1.64 1.18 2.22 1.18H254.8ZM254.8 0H2.22C0.99 0 0 0.99 0 2.22V85.35C0 86.57 0.99 87.57 2.22 87.57H254.8C256.02 87.57 257.02 86.58 257.02 85.35V2.22C257.02 1 256.03 0 254.8 0Z" fill="#0F594B"/>
@@ -166,7 +175,7 @@ export default function EndPage() {
                     </div>
 
                     
-                    <div className="resultLine">
+                    <div className="resultLine" style={{whiteSpace: "pre-wrap"}}>
                         <Result 
                             title={title[index][0]}
                             imgsrc={image[index][0]} 

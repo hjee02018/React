@@ -60,7 +60,7 @@
 }
 .aniExp{
     white-space: pre-wraps;
-    font-size: 15px;
+    font-size: 14px;
     margin-bottom: 50px;
 }
 .moreInfo{
@@ -86,7 +86,7 @@
 }
 
 .compatibilityLine{
-    width:90%;
+    width:100%;
     margin: 0 auto;
     /*margin-bottom: 200px;*/
     display:flex;
@@ -95,14 +95,15 @@
 }
 
 .logoLine{
-    height: 358px;
+    height: 270px;
 }
 .logoImage{
-    
-    margin-top: 180px;
-    margin-left : 570px;
-    position:relative;
-    width: 22vw;
+
+    margin-top: 130px;
+    margin-bottom: 0px;
+    height : 45%;
+    width: 100%;
+    /*position:relative;*/
 }
 
 .endPageFooter{
