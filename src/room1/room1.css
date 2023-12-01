@@ -1,4 +1,4 @@
-.room2Body {
+.room1Body {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -10,26 +10,26 @@
   background-color: rbga(0, 0, 0, 0.5);
   overflow: hidden;
 }
-.room2Counter {
+.room1Counter {
   position: relative;
   z-index: 5;
   margin-bottom: 10vh;
 }
-.room2Counter > img {
+.room1Counter > img {
   width: 258px;
   height: 88px;
 }
-.room2Counter p {
+.room1Counter p {
   position: absolute;
   color: white;
   top: 3vh;
   left: 95px;
   font-size: 30px;
 }
-.room2 img:hover {
+.room1 img:hover {
   cursor: pointer;
 }
-.room2 {
+.room1 {
   position: relative;
 }
 .pot_iso {
@@ -69,7 +69,7 @@
   left: -4.8vw;
   z-index: 5;
 }
-.room2ResultButton {
+.room1ResultButton {
   z-index: 5;
   margin-bottom: 10vh;
 }

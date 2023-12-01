@@ -165,19 +165,19 @@ export default function Room1() {
   //4개 다 찾았다면 오른쪽 버튼 클릭 시 Room2로 이동
   function toNextPage() {
     if (found == 4) {
-      navigate("/end");
+      navigate("/room2");
     }
   }
   return (
     <div>
-      <div className="room2Body">
-        <div className="room2Counter">
+      <div className="room1Body">
+        <div className="room1Counter">
           <img src="./res/room1/counter.svg" className="counter" />
           <p className="counterText">
             <span>{found}</span> / 4
           </p>
         </div>
-        <div className="room2">
+        <div className="room1">
           <img
             src="./res/room1/tea_iso.png"
             className="tea_iso item"
@@ -207,7 +207,7 @@ export default function Room1() {
             onClick={clickItem}
           />
         </div>
-        <div className="room2ResultButton">
+        <div className="room1ResultButton">
           <img
             className="resultButton"
             onMouseOver={highlightFinishButton}
