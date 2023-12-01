@@ -4,6 +4,8 @@ import Result from './Result';
 import {useNavigate} from "react-router-dom";
 import answerResult from '../answerResult';
 
+
+// 최대값 계산
 function findMaxElementList(arr) {
 
     let maxElement = arr[0];
@@ -49,10 +51,10 @@ export default function EndPage() {
         ["계절: 봄", "적성: 명리학", "방위: 동" ], ["계절: 여름", "적성: 의술", "방위: 남" ], ["계절: 가을", "적성: 도술", "방위: 서"], ["계절: 겨울", "적성: 무속학", "방위: 북"],];
     const image = [
         // (수정) 마지막 사진은 왜 넣는것일까? => 이건 배경으로 변경할 예정
-        ["./res/endPageRes/season1.png", "./res/endPageRes/subject1.png", "./res/endPageRes/east.svg","./res/endPageRes/tiger.png.png" ],
-        ["./res/endPageRes/season2.png", "./res/endPageRes/subject2.png", "./res/endPageRes/south.svg","./res/endPageRes/tiger.png.png" ],
-        ["./res/endPageRes/season3.png", "./res/endPageRes/subject3.png", "./res/endPageRes/west.svg","./res/endPageRes/tiger.png.png" ],
-        ["./res/endPageRes/season4.png", "./res/endPageRes/subject4.png", "./res/endPageRes/north.svg","./res/endPageRes/tiger.png.png" ]
+        ["./res/endPageRes/season1.png", "./res/endPageRes/subject1.png", "./res/endPageRes/east.svg","./res/endPageRes/final_bg_1.png"],
+        ["./res/endPageRes/season2.png", "./res/endPageRes/subject2.png", "./res/endPageRes/south.svg","./res/endPageRes/final_bg_2.png" ],
+        ["./res/endPageRes/season3.png", "./res/endPageRes/subject3.png", "./res/endPageRes/west.svg","./res/endPageRes/final_bg_3.png" ],
+        ["./res/endPageRes/season4.png", "./res/endPageRes/subject4.png", "./res/endPageRes/north.svg","./res/endPageRes/final_bg_4.png" ]
     ];
 
     const explain = [
@@ -89,8 +91,8 @@ export default function EndPage() {
     //궁합 정보
     const relations =[[anisrc[3], anisrc[2]], [anisrc[2], anisrc[0]], [anisrc[1], anisrc[0]], [anisrc[0], anisrc[2]]];
 
-    const backgroundStyle = { backgroundImage: 'url(./res/endPageRes/final_bg_1.png)'}
-
+    //배경 style 추가 선언
+    const backgroundStyle = { backgroundImage: 'url(' + image[index][3] +')'}
 
     return (
         <div>
