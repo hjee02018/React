@@ -1,22 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
+import MainComponent from "./main";
 import img from "./res/main_bg.png";
 
 function InfoComponent() {
+  const [showMain, setShowMain] = useState(false);
+
   const textStyle = {
     position: "absolute",
-    top: "40%", // 세로 기준으로 위로부터 70% 위치
-    left: "50%", // 가로 기준으로 정중앙 위치
-    transform: "translate(-50%, -50%)", // 정중앙 정렬을 위한 변형
-    color: "#FFFFFF", // 텍스트 색상을 하얀색으로 지정
-    fontSize: 16, // 폰트 사이즈를 36으로 지정
+    top: "46%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    color: "#FFFFFF",
+    fontSize: "2.0vw",
     fontWeight: "bold",
   };
 
   const textStyle2 = {
     position: "absolute",
-    top: "50%", // 세로 기준으로 위로부터 70% 위치
-    left: "57%", // 가로 기준으로 정중앙 위치
-    fontSize: 10,
+    top: "56%",
+    left: "57%",
+    fontSize: "1.1vw",
     fontWeight: 400,
     color: "#FFFFFF",
     textAlign: "left",
@@ -24,9 +27,9 @@ function InfoComponent() {
 
   const textNormal1 = {
     position: "absolute",
-    top: "70%", // 세로 기준으로 위로부터 70% 위치
-    left: "20%", // 가로 기준으로 정중앙 위치
-    fontSize: 10,
+    top: "76%",
+    left: "20%",
+    fontSize: "1.1vw",
     fontWeight: 400,
     color: "#FFFFFF",
     textAlign: "left",
@@ -34,9 +37,9 @@ function InfoComponent() {
 
   const textNormal2 = {
     position: "absolute",
-    top: "70%", // 세로 기준으로 위로부터 70% 위치
-    left: "37%", // 가로 기준으로 정중앙 위치
-    fontSize: 10,
+    top: "76%",
+    left: "37%",
+    fontSize: "1.1vw",
     fontWeight: 400,
     color: "#FFFFFF",
     textAlign: "left",
@@ -44,26 +47,39 @@ function InfoComponent() {
 
   const imgStyle1 = {
     position: "absolute",
-    top: "50%", // 상단으로부터 60% 위치
-    left: "20%", // 좌측으로부터 30% 위치
-    width: "123px", // 이미지의 너비
-    height: "128px", // 이미지의 높이
+    top: "56%",
+    left: "20%",
+    width: "123px",
+    height: "128px",
   };
 
   const imgStyle2 = {
     position: "absolute",
-    top: "50%", // 상단으로부터 60% 위치
-    left: "37%", // 좌측으로부터 30% 위치
-    width: "123px", // 이미지의 너비
-    height: "128px", // 이미지의 높이
+    top: "56%",
+    left: "37%",
+    width: "123px",
+    height: "128px",
   };
 
   const imgStyle3 = {
-    width: "100%", // 이미지의 너비를 100%로 설정
-    height: "100vh", // 이미지의 높이를 100%로 설정
+    width: "100%",
+    height: "100vh",
     top: 0,
     left: 0,
     position: "fixed",
+  };
+  const buttonStyle = {
+    position: "absolute",
+    width: "3.3vw",
+    height: "3.3vh",
+    top: "40%",
+    left: "80%",
+    transform: "translate(-50%, -50%)",
+    cursor: "pointer",
+  };
+
+  const handleShowMain = () => {
+    setShowMain(true);
   };
 
   return (
@@ -91,8 +107,19 @@ function InfoComponent() {
         <br />
         나의 수호신을 만날 수 있다.
       </p>
-      <img src="./res/img.svg" alt="img1" style={imgStyle1} />
-      <img src="./res/img.svg" alt="img2" style={imgStyle2} />
+      <img src="./res/info/object_img.png" alt="img1" style={imgStyle1} />
+      <img src="./res/info/god_img.png" alt="img2" style={imgStyle2} />
+      {showMain ? (
+        <MainComponent />
+      ) : (
+        <div style={buttonStyle} onClick={handleShowMain}>
+          <img
+            src="./res/info/close.svg"
+            alt="Go to Main"
+            style={{ cursor: "pointer" }}
+          />
+        </div>
+      )}
     </div>
   );
 }
