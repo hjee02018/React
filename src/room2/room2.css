@@ -10,6 +10,13 @@
     background-color: rbga(0,0,0,0.5);
     overflow: hidden;
 }
+.room2logo{
+    position: absolute;
+    top: 6vh;
+    left: 2.8vw;
+    z-index: 6;
+}
+
 .room2Counter{
     position:relative;
     z-index: 5;
