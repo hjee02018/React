@@ -7,7 +7,7 @@ function InfoComponent() {
 
   const textStyle = {
     position: "absolute",
-    top: "46%",
+    top: "43%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     color: "#FFFFFF",
@@ -17,7 +17,7 @@ function InfoComponent() {
 
   const textStyle2 = {
     position: "absolute",
-    top: "56%",
+    top: "53%",
     left: "57%",
     fontSize: "1.1vw",
     fontWeight: 400,
@@ -27,7 +27,7 @@ function InfoComponent() {
 
   const textNormal1 = {
     position: "absolute",
-    top: "76%",
+    top: "70%",
     left: "20%",
     fontSize: "1.1vw",
     fontWeight: 400,
@@ -37,7 +37,7 @@ function InfoComponent() {
 
   const textNormal2 = {
     position: "absolute",
-    top: "76%",
+    top: "70%",
     left: "37%",
     fontSize: "1.1vw",
     fontWeight: 400,
@@ -47,15 +47,15 @@ function InfoComponent() {
 
   const imgStyle1 = {
     position: "absolute",
-    top: "56%",
+    top: "50%",
     left: "20%",
-    width: "123px",
+    width: "zz",
     height: "128px",
   };
 
   const imgStyle2 = {
     position: "absolute",
-    top: "56%",
+    top: "50%",
     left: "37%",
     width: "123px",
     height: "128px",
@@ -86,7 +86,13 @@ function InfoComponent() {
     <div>
       <img src={img} style={imgStyle3} alt="background"></img>
       <p style={textStyle}>한국술법학교 입학설명회</p>
-      <img src="./res/logo_w.svg" alt="logo CTA" className="logo-image" />
+      <img
+        src="./res/logo_w.svg"
+        alt="logo CTA"
+        className="logo-image"
+        style={{ cursor: "pointer" }}
+        onClick={handleShowMain}
+      />
       <p style={textStyle2}>
         본교에서는 개교 100주년을 맞아
         <br /> 최초로 특별 공개 입학설명회를 개최합니다.

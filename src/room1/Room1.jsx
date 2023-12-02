@@ -16,6 +16,12 @@ export default function Room1() {
   const [largeImg, setLargeImg] = useState(false);
   //페이지 사이 이동하는데 쓰임
   const navigate = useNavigate();
+  const [isPopupOpen, setPopupOpen] = useState(false);
+
+  // 로고 클릭 시 팝업창을 열도록 하는 함수
+  const handleLogoClick = () => {
+    setPopupOpen(true);
+  };
 
   //어떤 특정 class를 가진 element가 나타나기를 기다린다.
   function waitForElm(selector) {
@@ -171,6 +177,11 @@ export default function Room1() {
   return (
     <div>
       <div className="room1Body">
+        <img
+          src="./res/room1/logo_w.svg"
+          className="logo"
+          onClick={handleLogoClick}
+        />
         <div className="room1Counter">
           <img src="./res/room1/counter.svg" className="counter" />
           <p className="counterText">
