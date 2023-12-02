@@ -1,17 +1,76 @@
-.room1Body {
+.room2Body {
   width: 100vw;
   height: 100vh;
-  display: flex;
+  /* display: flex; */
   position: relative;
-  justify-content: space-between;
-  align-items: end;
+  /* justify-content: space-between; */
+  /* align-items: end; */
   background-image: url(../../public/res/room1/room1_bg.png);
   background-size: 100% 100%;
   background-color: rbga(0, 0, 0, 0.5);
   overflow: hidden;
 }
+.popup {
+  position: fixed;
+  top: 30vh;
+  left: 30vw;
+  width: 40%;
+  height: auto;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  z-index: 10;
+}
+
+.popupBackground {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: 6;
+}
+
+.popupContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 7;
+  align-items: center;
+}
+
+.popupText {
+  position: absolute;
+  top: 5vh;
+  left: 7%;
+  z-index: 7;
+  font-size: 2.3vw;
+  font-weight: 800;
+  text-align: center;
+  color: #ffffff;
+}
+
+.popupYes {
+  position: absolute;
+  width: 40%;
+  height: auto;
+  bottom: 5vh;
+  left: 3vw;
+}
+.popupNo {
+  position: absolute;
+  width: 40%;
+  height: auto;
+  bottom: 7vh;
+  right: 3vw;
+}
+
+.popupYes img,
+.popupNo img {
+  width: 6vw; /* 버튼의 크기를 조절할 수 있습니다. */
+  height: auto;
+}
+
 .room1Counter {
-  position: relative;
+  position: absolute;
   z-index: 5;
   margin-bottom: 10vh;
 }
@@ -26,19 +85,28 @@
   left: 95px;
   font-size: 30px;
 }
-.room1 img:hover {
-  cursor: pointer;
+.logo {
+  position: relative;
+  top: -86vh;
+  left: 2.8vw;
+  width: 12vw;
+  height: 12vh;
+  z-index: 5;
 }
+
 .room1 {
   position: relative;
 }
+.room1 img:hover {
+  cursor: pointer;
+}
 .pot_iso {
   opacity: 0;
-  width: 6.2vw;
-  height: 7.8vh;
+  width: 7.7vw;
+  height: 7.5vh;
   position: absolute;
-  top: -66vh;
-  left: 8.8vw;
+  top: -65vh;
+  left: 9.5vw;
   z-index: 5;
 }
 .box_iso {
@@ -55,8 +123,8 @@
   width: 10.7vw;
   height: 23.5vh;
   position: absolute;
-  top: -78vh;
-  left: -20.8vw;
+  top: -66vh;
+  left: -13.8vw;
   z-index: 5;
   /*  transform: rotate(10deg); /* 우측으로 30도 회전 */
 }

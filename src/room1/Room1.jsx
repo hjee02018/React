@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./room1.css";
 import { useNavigate } from "react-router-dom";
 import Question from "./Question";
+import Room2 from "../room2/Room2";
 
 export default function Room1() {
   const $ = (selector) => document.querySelector(selector);
@@ -21,6 +22,18 @@ export default function Room1() {
   // 로고 클릭 시 팝업창을 열도록 하는 함수
   const handleLogoClick = () => {
     setPopupOpen(true);
+  };
+
+  // No
+  const handleNoPopup = () => {
+    setPopupOpen(false);
+  };
+
+  // Yes
+  const handleYesPopup = () => {
+    setPopupOpen(false);
+    navigate("/", { replace: true });
+    window.location.reload();
   };
 
   //어떤 특정 class를 가진 element가 나타나기를 기다린다.
@@ -171,17 +184,52 @@ export default function Room1() {
   //4개 다 찾았다면 오른쪽 버튼 클릭 시 Room2로 이동
   function toNextPage() {
     if (found == 4) {
-      navigate("/room2");
+      navigate("/end");
     }
   }
   return (
     <div>
-      <div className="room1Body">
+      <div className="room2Body">
         <img
           src="./res/room1/logo_w.svg"
           className="logo"
+          style={{ cursor: "pointer" }}
           onClick={handleLogoClick}
         />
+        {isPopupOpen && (
+          <div className="popup">
+            {/* 팝업창 배경 이미지 */}r
+            <img
+              className="popupBackground"
+              src="./res/back_popup/back_popupbg.png"
+              alt="Popup Background"
+            />
+            {/* 팝업 내용 */}
+            <p className="popupText">
+              탐방을 중단하시겠습니까?
+              <br />
+              지금까지의 기록이 초기화됩니다.
+            </p>
+            <div className="popupContent">
+              {/* 예, 아니오 버튼 이미지 */}
+              <img
+                src="./res/back_popup/yes_cta.svg"
+                alt="Yes Button"
+                className="popupYes"
+                style={{ cursor: "pointer" }}
+                onClick={handleYesPopup}
+              />
+              <img
+                src="./res/back_popup/no_cta.svg"
+                alt="No Button"
+                className="popupNo"
+                style={{ cursor: "pointer" }}
+                onClick={handleNoPopup}
+              />
+              {/* 추가적인 팝업 내용을 여기에 추가할 수 있습니다. */}
+            </div>
+          </div>
+        )}
         <div className="room1Counter">
           <img src="./res/room1/counter.svg" className="counter" />
           <p className="counterText">
@@ -218,13 +266,13 @@ export default function Room1() {
             onClick={clickItem}
           />
         </div>
-        <div className="room1ResultButton">
+        <div className="room2ResultButton">
           <img
             className="resultButton"
             onMouseOver={highlightFinishButton}
             onMouseOut={unhighlightFinishButton}
             onClick={toNextPage}
-            width={"250vw"}
+            width={"258vw"}
             src="./res/room1/next.svg" // 이미지 파일의 경로에 따라 수정
             alt="Next"
           />
