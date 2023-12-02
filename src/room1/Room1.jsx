@@ -184,12 +184,12 @@ export default function Room1() {
   //4개 다 찾았다면 오른쪽 버튼 클릭 시 Room2로 이동
   function toNextPage() {
     if (found == 4) {
-      navigate("/end");
+      navigate("/room2");
     }
   }
   return (
     <div>
-      <div className="room2Body">
+      <div className="room1Body">
         <img
           src="./res/room1/logo_w.svg"
           className="logo"
