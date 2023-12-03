@@ -266,7 +266,7 @@ export default function Room1() {
             onClick={clickItem}
           />
         </div>
-        <div className="room2ResultButton">
+        <div className="room1ResultButton">
           <img
             className="resultButton"
             onMouseOver={highlightFinishButton}
@@ -276,6 +276,7 @@ export default function Room1() {
             src="./res/room1/next.svg" // 이미지 파일의 경로에 따라 수정
             alt="Next"
           />
+          {/* <p className="room1ResultButtonText">다음으로</p> */}
         </div>
         <div className="shroud"></div>
         <img src={largeImg} className="largeImg"></img>

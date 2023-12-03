@@ -142,6 +142,15 @@
   z-index: 5;
   margin-bottom: 10vh;
 }
+.room1ResultButtonText {
+  position: absolute;
+  z-index: 7;
+  color: white;
+  font-size: 32px;
+  font-weight: 400;
+  bottom: 17vh;
+  right: 5.3vw;
+}
 .resultButton {
   z-index: 6;
 }
